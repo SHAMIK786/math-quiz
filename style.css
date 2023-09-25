@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    background: #5cd1ff;
+}
+
+.container{
+    width: 30%;
+    z-index: 1;
+    height: 90vh;
+    margin: 0 auto;
+    margin-top: 4.5vh;
+    background: #59b2fc;
+    box-shadow: 0px 0px 2px 5px #fff;
+    overflow: hidden;
+}
+.container .initial_page{
+    position: absolute;
+    width: 30%;
+    height: 90vh;
+    background: #3272a7;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+}
+.int_pg_start_btn{
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    background: cornflowerblue;
+    box-shadow: 0px 0px 2px 2px #fff;
+    color: #fff;
+}
+
+.game_area{
+    width: 100%;
+    height: 90vh;
+    background: #00a2ff;
+    transform: translate(-700px, 0);
+    transition: 0.3s;
+    visibility: hidden;
+}
+.nav{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+}
+.nav .nav_title{
+    width: 40%;
+    display: inline-block;
+}
+.nav .nav_btns{
+    display: inline-block;
+    width: 58%;
+    text-align: right;
+}
+.nav .nav_btns .nav_btn{
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.game_area .play_box{
+    width: 90%;
+    min-height: 80vh;
+    margin: 0 auto;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid #fff; */
+}
+.play_box .question_box{
+    background: #fff;
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px 1px #000;
+    min-height: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.play_box .question_box .question{
+    font-size: 30px;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 15px 1px #000;
+}
+.play_box .question_box .options{
+    padding: 20px;
+    min-height: 30vh;
+    text-align: center;
+}
+.play_box .question_box .options .opt{
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 10px;
+    margin: 10px 15px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.play_box .question_box .options .opt:hover{
+    background: crimson;
+    color: #fff;
+}
+.play_box .question_box .show_score{
+    background: #5dccff;
+    text-align: center;
+    font-size: 35px;
+}
+
+@media only screen and (max-width: 450px) {
+    .container{
+        width: 95%;
+        position: relative;
+        z-index: 1;
+        min-height: 85vh;
+        margin: 0 auto;
+        margin-top: 7.5vh;
+        background: #59b2fc;
+        box-shadow: 0px 0px 2px 5px #fff;
+    }
+    .initial_page{
+        width: 100%!important;
+    }
+    .nav .nav_title{
+        width: 50%;
+        display: inline-block;
+    }
+    .nav .nav_btns{
+        display: inline-block;
+        width: 48%;
+        text-align: right;
+    }
+}
+
+.dialog_box{
+    position: absolute;
+    width: 32%;
+    height: 40vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: cornflowerblue;
+    box-shadow: 0px 0px 50px 5px #000;
+    transition: 00.3s ease;
+    transform: translate(-250%, -50%);
+    visibility: hidden;
+    opacity: 0;
+}
+.dialog_box .box_content{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    text-align: center;
+}
+.dialog_box .box_content .btn_close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.dialog_box .box_content .select_name{
+    margin-right: 2px;
+}
+.btn_close:hover{
+    color: #ff0000;
+}
+.dialog_box .box_content .selectBox{
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+.dialog_box .box_content .selectBox select{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    outline: none;
+}
+.dialog_box .box_content .box_btn{
+    padding: 5px 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.info_box{
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30vh;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.info_box .show_info{
+    width: 100%;
+    background: #4c98b9;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 5px #000;
+    transition: 0.3s ease;
+}

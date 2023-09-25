@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>MATHS PUZZLE</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tab initial_page">
+            <h2 class="initial_page_title">WELCOME...<br><br></h2>
+            <h1>MATHS PUZZLE</h1><br><br>
+            <button class="int_pg_start_btn" onclick="start()">PLAY</button>
+        </div>
+
+        <div class="tab game_area">
+            <div class="nav">
+                <h3 class="nav_title">MATHS PUZZLE</h3>
+
+                <div class="nav_btns">
+                    <button class="nav_btn btn_show_dialog" onclick="show_dialog()">Options</button>
+                </div>
+            </div>
+
+            <div class="play_box">
+                <div class="question_box">
+                    <div class="question">Q: <span class="show_question">x + y = ?</span></div>
+
+                    <div class="options">
+                        <span class="opt opt_a">00</span>
+                        <span class="opt opt_b">00</span><br>
+                        <span class="opt opt_c">00</span>
+                        <span class="opt opt_d">00</span>
+                    </div>
+
+                    <div class="show_score">00</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dialog_box">
+        <div class="box_content">
+            <div class="btn_close"><span onclick="hide_dialog()">&times;</span></div>
+
+            <div class="selectBox">
+                <label for="select_dificulty" class="select_name">Dificulty:</label>
+                <select id="select_dificulty">
+                    <option value="normal">NORMAL</option>
+                    <option value="medium">MEDIUM</option>
+                    <option value="hard">HARD</option>
+                </select>
+            </div>
+
+            <div class="selectBox">
+                <label for="select_type" class="select_name">Type:</label>
+                <select name="type_select" id="select_type">
+                    <option value="addition">ADDITION</option>
+                    <option value="subtraction">SUBTRACTION</option>
+                    <option value="multiplication">MULTIPLICATION</option>
+                    <option value="division">DIVISION</option>
+                    <option value="mixed">MIXED</option>
+                </select>
+            </div>
+
+            <div class="box_btns">
+                <button class="box_btn btn_confirm" onclick="create_ques()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info_box">
+        <h2 class="show_info">CORRECT<br> +100</h2>
+    </div>
+
+    <div class="background_stacks">
+        <div class="design_block "></div>
+        <div class="design_block"></div>
+        <div class="design_block"></div>
+        <div class="design_block"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
